@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Game</h2>
+                <h2>Edit Game</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('game.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('gme.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -23,26 +23,27 @@
         </div>
     @endif
 
-    <form action="{{ route('game.store') }}" method="POST">
+    <form action="{{ route('game.update',$game->id) }}" method="POST">
         @csrf
+        @method('PUT')
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Name:</strong>
-                    <input type="text" name="name" class="form-control" placeholder="Name">
+                    <input type="text" name="name" value="{{ $game->name }}" class="form-control" placeholder="Name">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Category:</strong>
-                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category"></textarea>
+                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category">{{ $game->category }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Price:</strong>
-                    <textarea class="form-control" style="height:150px" name="price" placeholder="Price"></textarea>
+                    <textarea class="form-control" style="height:150px" name="price" placeholder="Price">{{ $game->price }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
