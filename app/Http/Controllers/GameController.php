@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Session;
 
-class CategoryController extends Controller
+//class CategoryController extends Controller
+class GameController extends Controller
 {
     /**
      * CategoryController constructor.
