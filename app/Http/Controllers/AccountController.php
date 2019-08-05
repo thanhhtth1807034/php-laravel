@@ -14,6 +14,11 @@ class AccountController extends Controller
         return view('login');
     }
 
+    public function menu()
+    {
+        return view('menu');
+    }
+
     public function processLogin(Request $request)
     {
         $email = $request->email;
@@ -43,16 +48,17 @@ class AccountController extends Controller
             'status' => $status
         ];
         $account = new Account();
-        $account -> email = $request -> email;
-        $account -> password = $request -> password;
-        $account -> address = $request -> address;
-        $account -> status = $request -> status;
+        $account->email = $request->email;
+        $account->password = $request->password;
+        $account->address = $request->address;
+        $account->status = $request->status;
 
-        $account -> save();
+        $account->save();
         return view('register-success', $data);
     }
 
-    public function getAllAccount(){
+    public function getAllAccount()
+    {
 //        $listAccount = Account::all();
         $listAccount = Account::paginate(1);
         $data = [
@@ -61,7 +67,8 @@ class AccountController extends Controller
         return view('list-account', $data);
     }
 
-    public function getAccountById($id){
+    public function getAccountById($id)
+    {
         $existAccount = Account::find($id);
         $data = [
             'existAccount' => $existAccount
@@ -110,4 +117,6 @@ class AccountController extends Controller
 //        print_r($users);
 //        echo '</pre>';
 //    }
+
+
 }

@@ -1,4 +1,4 @@
-@extends('game.layout')
+@extends('layout')
 
 @section('content')
     <div class="row">
@@ -36,7 +36,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Category:</strong>
-                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category"></textarea>
+                    <textarea class="form-control" style="height:150px" name="category"
+                              placeholder="Category"></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">

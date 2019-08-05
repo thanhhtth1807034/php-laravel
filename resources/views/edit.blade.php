@@ -1,4 +1,4 @@
-@extends('game.layout')
+@extends('layout')
 
 @section('content')
     <div class="row">
@@ -7,7 +7,7 @@
                 <h2>Edit Game</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('gme.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('game.index') }}"> Back</a>
             </div>
         </div>
     </div>
@@ -37,13 +37,15 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Category:</strong>
-                    <textarea class="form-control" style="height:150px" name="category" placeholder="Category">{{ $game->category }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="category"
+                              placeholder="Category">{{ $game->category }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Price:</strong>
-                    <textarea class="form-control" style="height:150px" name="price" placeholder="Price">{{ $game->price }}</textarea>
+                    <textarea class="form-control" style="height:150px" name="price"
+                              placeholder="Price">{{ $game->price }}</textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

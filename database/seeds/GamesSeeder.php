@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class GameSeeder extends Seeder
+class GamesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class GameSeeder extends Seeder
      */
     public function run()
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+//        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
         DB::table('games') -> truncate();
         DB::table('games') -> insert([
             [
@@ -71,6 +71,6 @@ class GameSeeder extends Seeder
                 'updated_at' => date('Y-m-d H:i:s')
             ],
         ]);
-        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
+//        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 }

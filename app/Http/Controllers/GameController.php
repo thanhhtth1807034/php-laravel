@@ -15,10 +15,10 @@ class GameController extends Controller
     /**
      * CategoryController constructor.
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+//    public function __construct()
+//    {
+//        $this->middleware('auth');
+//    }
 
 
     /**
@@ -158,13 +158,13 @@ class GameController extends Controller
     {
         $games = Game::latest()->paginate(5);
 
-        return view('game.index',compact('games'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+        return view('index')
+            ->with('games', $games);
     }
 
     public function create()
     {
-        return view('game.create');
+        return view('create');
     }
 
     public function store(Request $request)
@@ -177,18 +177,18 @@ class GameController extends Controller
 
         Game::create($request->all());
 
-        return redirect()->route('game.index')
-            ->with('success','Game created successfully.');
+        return redirect()->route('index')
+            ->with('success', 'Game created successfully.');
     }
 
     public function show(Game $game)
     {
-        return view('game.show',compact('game'));
+        return view('show')->with('game', $game);
     }
 
     public function edit(Game $game)
     {
-        return view('game.edit',compact('game'));
+        return view('edit')->with('game', $game);
     }
 
     public function update(Request $request, Game $game)
@@ -201,8 +201,8 @@ class GameController extends Controller
 
         $game->update($request->all());
 
-        return redirect()->route('game.index')
-            ->with('success','Game updated successfully');
+        return redirect()->route('index')
+            ->with('success', 'Game updated successfully');
     }
 
     public function destroy(Game $game)
@@ -210,6 +210,6 @@ class GameController extends Controller
         $game->delete();
 
         return redirect()->route('game.index')
-            ->with('success','Game deleted successfully');
+            ->with('success', 'Game deleted successfully');
     }
 }

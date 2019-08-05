@@ -40,10 +40,10 @@
             <label for="inputAddress">Address</label>
             <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St">
         </div>
-        <div class="form-group">
-            <label for="inputStatus">Status</label>
-            <input type="text" name="status" class="form-control" id="inputStatus" placeholder="Status">
-        </div>
+{{--        <div class="form-group">--}}
+{{--            <label for="inputStatus">Status</label>--}}
+{{--            <input type="text" name="status" class="form-control" id="inputStatus" placeholder="Status">--}}
+{{--        </div>--}}
 {{--        <div class="form-row">--}}
 {{--            <div class="form-group col-md-6">--}}
 {{--                <label for="inputCity">City</label>--}}

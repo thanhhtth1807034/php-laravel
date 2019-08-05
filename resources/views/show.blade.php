@@ -1,4 +1,4 @@
-@extends('game.layout')
+@extends('layout')
 
 @section('content')
     <div class="row">
@@ -32,4 +32,5 @@
             </div>
         </div>
     </div>
+
 @endsection
