@@ -26,12 +26,6 @@ Route::get('/account/list', 'AccountController@getAllAccount');
 
 Route::get('/account/account-detail/{id}', 'AccountController@getAccountById');
 
-//Route::resource('/game', 'GameController');
-
-Route::get('/account/form', 'AccountController@form');
-Route::get('/account/display', 'AccountController@display');
-Route::post('/account/save', 'AccountController@save');
-Route::put('/account/lammoi', 'AccountController@lammoi');
-Route::get('/account/sua', 'AccountController@sua');
+Route::resource('/game', 'GameController');
 //Route::resource('/game', ['as' => 'game', 'uses' => 'GameController']);
 
