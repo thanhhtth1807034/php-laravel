@@ -29,3 +29,4 @@ Route::get('/account/account-detail/{id}', 'AccountController@getAccountById');
 Route::resource('/game', 'GameController');
 //Route::resource('/game', ['as' => 'game', 'uses' => 'GameController']);
 
+Route::post('/game/delete-multiple', ['as' => 'game.delete-multiple', 'uses' => 'GameController@destroyMultiple']);

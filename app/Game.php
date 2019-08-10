@@ -9,6 +9,6 @@ class Game extends Model
 //    protected $connection = "hello-postgres";
 
     protected $fillable = [
-        'name', 'category', 'price'
+        'name', 'category', 'price','thumbnail'
     ];
 }

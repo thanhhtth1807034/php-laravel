@@ -17,6 +17,7 @@ class CreateGamesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('category');
+            $table->string('thumbnail');
             $table->double('price');
             $table->timestamps();
         });

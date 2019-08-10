@@ -18,6 +18,7 @@ class GamesSeeder extends Seeder
                 'id' => 1,
                 'name' => 'Counter Strike 7.0',
                 'category' => 'đối kháng',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '0',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -26,6 +27,7 @@ class GamesSeeder extends Seeder
                 'id' => 2,
                 'name' => 'PUBG',
                 'category' => 'đối kháng',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '300',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -34,6 +36,7 @@ class GamesSeeder extends Seeder
                 'id' => 3,
                 'name' => 'Pikachu',
                 'category' => 'Trí tuệ',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '0',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -42,6 +45,7 @@ class GamesSeeder extends Seeder
                 'id' => 4,
                 'name' => 'Auto chess',
                 'category' => 'Chiến thuật',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '200',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -50,6 +54,7 @@ class GamesSeeder extends Seeder
                 'id' => 5,
                 'name' => 'Diablo',
                 'category' => 'đối kháng',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '100',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -58,6 +63,7 @@ class GamesSeeder extends Seeder
                 'id' => 6,
                 'name' => 'GTA',
                 'category' => 'Nhập vai',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '2000',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')
@@ -66,6 +72,7 @@ class GamesSeeder extends Seeder
                 'id' => 7,
                 'name' => 'LOL',
                 'category' => 'Chiến thuật',
+                'thumbnail' => 'https://steamcdn-a.akamaihd.net/steam/apps/770240/header.jpg',
                 'price' => '0',
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s')

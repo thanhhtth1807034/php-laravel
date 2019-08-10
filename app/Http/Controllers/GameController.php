@@ -158,13 +158,13 @@ class GameController extends Controller
     {
         $games = Game::latest()->paginate(5);
 
-        return view('index')
+        return view('admin.index')
             ->with('games', $games);
     }
 
     public function create()
     {
-        return view('create');
+        return view('admin.create');
     }
 
     public function store(Request $request)
@@ -172,8 +172,11 @@ class GameController extends Controller
         $request->validate([
             'name' => 'required',
             'category' => 'required',
+            'thumbnail' => 'required',
             'price' => 'required'
         ]);
+
+        \Log::info($request);
 
         Game::create($request->all());
 
@@ -181,23 +184,29 @@ class GameController extends Controller
             ->with('success', 'Game created successfully.');
     }
 
-    public function show(Game $game)
+    public function show($id)
     {
-        return view('show')->with('game', $game);
+        $game = Game::find($id);
+        return view('admin.show')->with('game', $game);
     }
 
-    public function edit(Game $game)
+    public function edit( $id)
     {
-        return view('edit')->with('game', $game);
+        $game = Game::find($id);
+        return view('admin.edit')->with('game', $game);
     }
 
-    public function update(Request $request, Game $game)
+    public function update(Request $request,$id)
     {
+        $game = Game::find($id);
         $request->validate([
             'name' => 'required',
             'category' => 'required',
+            'thumbnail' => 'required',
             'price' => 'required',
         ]);
+
+        \Log::info($request);
 
         $game->update($request->all());
 
@@ -205,11 +214,18 @@ class GameController extends Controller
             ->with('success', 'Game updated successfully');
     }
 
-    public function destroy(Game $game)
+    public function destroy($id)
     {
+        $game = Game::find($id);
         $game->delete();
 
         return redirect()->route('game.index')
             ->with('success', 'Game deleted successfully');
+    }
+
+    public function destroyMultiple( Request $request){
+        $id = $request -> id;
+        Game::whereIn('id', explode("," , $id)) -> delete();;
+        return redirect('/game')->response()->json(['status' => true, 'message'=> "Game deleted successfully"]);
     }
 }
